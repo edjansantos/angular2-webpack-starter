@@ -12,6 +12,9 @@ module.exports = webpackMerge(commonConfig, {
         filename: '[name].' + hash + '.js',
         chunkFilename: '[id].' + hash + '.chunk.js'
     },
+    devServer: {
+      historyApiFallback: true
+    },
     htmlLoader: {
         minimize: false // workaround for ng2
     },
